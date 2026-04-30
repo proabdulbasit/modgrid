@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The MODGRID page you were looking for couldn't be found." />
+    <meta name="robots" content="noindex, follow" />
+    <title>Page Not Found — MODGRID</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="https://modgrid.vercel.app/images/icon.png" />
+    <link rel="stylesheet" href="https://modgrid.vercel.app/css/styles.css" />
+    <style>
+        .nf {
+            min-height: calc(100vh - 230px);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 140px 0 80px;
+        }
+        .nf::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            height: 600px;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .nf > .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .nf-code {
+            font-size: clamp(6rem, 16vw, 11rem);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.05em;
+            background: linear-gradient(135deg, var(--primary-strong), #c4b5fd);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 8px 30px var(--primary-glow));
+        }
+        .nf h1 {
+            font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 14px;
+        }
+        .nf p {
+            color: var(--text-dim);
+            max-width: 520px;
+            margin: 0 auto 32px;
+            font-size: 1rem;
+        }
+        .nf-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+        }
+        .nf-suggestions {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .nf-suggestions-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-mute);
+            margin-bottom: 18px;
+        }
+        .nf-suggestions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        @media (max-width: 720px) {
+            .nf-suggestions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .nf-actions .btn {
+                width: 100%;
+            }
+            .nf-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="https://modgrid.vercel.app/" class="brand">
+                <span class="brand-mark">M</span>
+                <span>MODGRID</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://modgrid.vercel.app/">Home</a></li>
+                <li><a href="https://modgrid.vercel.app/contact/">Contact</a></li>
+            </ul>
+            <button class="burger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="nf">
+        <div class="container">
+            <div class="nf-code">404</div>
+            <h1>This Page Got Mod-Menu'd Out of Existence</h1>
+            <p>The mod menu, page, or game you were looking for isn't here. It might have been moved, renamed, or it never existed in the first place.</p>
+
+            <div class="nf-actions">
+                <a href="https://modgrid.vercel.app/" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V10"/></svg>
+                    Back to Home
+                </a>
+                <a href="https://modgrid.vercel.app/#browse" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    Browse All Menus
+                </a>
+            </div>
+
+            <div class="nf-suggestions">
+                <p class="nf-suggestions-label">Try one of these instead</p>
+                <div class="nf-suggestions-grid">
+                    <a href="https://modgrid.vercel.app/grand-theft-auto-v-mod-menu/" class="browse-card">
+                        <span class="browse-card-name">Grand Theft Auto V</span>
+                        <span class="browse-card-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://modgrid.vercel.app/cyberpunk-2077-mod-menu/" class="browse-card">
+                        <span class="browse-card-name">Cyberpunk 2077</span>
+                        <span class="browse-card-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://modgrid.vercel.app/roblox-mod-menu/" class="browse-card">
+                        <span class="browse-card-name">Roblox</span>
+                        <span class="browse-card-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://modgrid.vercel.app/minecraft-mod-menu/" class="browse-card">
+                        <span class="browse-card-name">Minecraft</span>
+                        <span class="browse-card-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-row">
+                <a href="https://modgrid.vercel.app/" class="brand">
+                    <span class="brand-mark">M</span>
+                    <span>MODGRID</span>
+                </a>
+                <ul class="footer-links">
+                    <li><a href="https://modgrid.vercel.app/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="https://modgrid.vercel.app/terms-of-service/">Terms of Service</a></li>
+                    <li><a href="https://modgrid.vercel.app/eula/">EULA</a></li>
+                    <li><a href="https://modgrid.vercel.app/contact/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 MODGRID. Not affiliated with any game publisher or developer.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://modgrid.vercel.app/js/main.js"></script>
+</body>
+</html>

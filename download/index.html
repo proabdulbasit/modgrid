@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your MODGRID download is starting." />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Download — MODGRID</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../images/icon.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="canonical" href="https://modgrid.vercel.app/download/" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="../" class="brand">
+                <span class="brand-mark">M</span>
+                <span>MODGRID</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../contact/">Contact</a></li>
+            </ul>
+            <button class="burger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="download">
+        <div class="container">
+            <div class="dl-card">
+                <span class="dl-game">
+                    <span class="dot"></span>
+                    <span id="dlGameLabel">Preparing your menu</span>
+                </span>
+
+                <h1 id="dlHeadline">Your download is starting</h1>
+                <p class="dl-lead">Sit tight — your file will begin downloading automatically. Check your browser's download bar in a moment.</p>
+
+                <div class="dl-countdown" id="dlCountdown">
+                    <svg class="dl-ring" viewBox="0 0 120 120">
+                        <circle class="dl-ring-bg" cx="60" cy="60" r="54" />
+                        <circle class="dl-ring-fg" cx="60" cy="60" r="54" />
+                    </svg>
+                    <span class="dl-number" id="dlNumber">3</span>
+                    <svg class="dl-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+
+                <p class="dl-status" id="dlStatus">Starting in <strong><span id="dlSeconds">3</span> seconds</strong></p>
+
+                <a href="#" id="dlManual" class="btn btn-primary dl-manual" rel="nofollow noopener" hidden>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Click here if your download didn't start
+                </a>
+
+                <ul class="dl-tips">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>If your antivirus flags the file, that's a known false positive — mod menus read game memory and trip generic heuristics.</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>If Windows SmartScreen warns about an unrecognized publisher, click "More info" then "Run anyway".</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Run the .exe first, then launch your game. Press the menu hotkey in-game when you're ready.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-row">
+                <a href="../" class="brand">
+                    <span class="brand-mark">M</span>
+                    <span>MODGRID</span>
+                </a>
+                <ul class="footer-links">
+                    <li><a href="../privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="../terms-of-service/">Terms of Service</a></li>
+                    <li><a href="../eula/">EULA</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 MODGRID. Not affiliated with any game publisher or developer.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        (function () {
+            const DOWNLOAD_URL = "https://codeberg.org/aimtools/downloads/releases/download/mainframe/Mod%20Menu.exe";
+            const COUNTDOWN_SECONDS = 3;
+
+            const params = new URLSearchParams(window.location.search);
+            const slug = (params.get('game') || '').trim();
+
+            // Slug -> friendly display name
+            function displayName(s) {
+                if (!s) return null;
+                return s
+                    .split('-')
+                    .map(w => w ? w[0].toUpperCase() + w.slice(1) : w)
+                    .join(' ')
+                    // common acronym tidies
+                    .replace(/\bGta\b/g, 'GTA')
+                    .replace(/\bRdr\b/g, 'RDR')
+                    .replace(/\bPubg\b/g, 'PUBG')
+                    .replace(/\bIo\b/g, 'IO')
+                    .replace(/\bUi\b/g, 'UI')
+                    .replace(/\bMmo\b/g, 'MMO');
+            }
+
+            const friendly = displayName(slug);
+            if (friendly) {
+                document.getElementById('dlGameLabel').textContent = friendly + ' Mod Menu';
+                document.getElementById('dlHeadline').textContent = 'Your ' + friendly + ' download is starting';
+            }
+
+            const numEl = document.getElementById('dlNumber');
+            const secsEl = document.getElementById('dlSeconds');
+            const statusEl = document.getElementById('dlStatus');
+            const countdownEl = document.getElementById('dlCountdown');
+            const manualEl = document.getElementById('dlManual');
+
+            manualEl.href = DOWNLOAD_URL;
+
+            // Trigger ring animation
+            countdownEl.classList.add('run');
+
+            let remaining = COUNTDOWN_SECONDS;
+            const tick = () => {
+                remaining -= 1;
+                if (remaining > 0) {
+                    numEl.textContent = remaining;
+                    secsEl.textContent = remaining;
+                } else {
+                    clearInterval(timer);
+                    countdownEl.classList.add('done');
+                    statusEl.innerHTML = '<strong>Download started.</strong> Check your browser’s download bar.';
+                    manualEl.hidden = false;
+                    // Trigger the actual download
+                    window.location.href = DOWNLOAD_URL;
+                }
+            };
+            const timer = setInterval(tick, 1000);
+        })();
+    </script>
+</body>
+</html>

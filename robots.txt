@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /download
+Disallow: /download/
+
+Sitemap: https://modgrid.vercel.app/sitemap.xml
